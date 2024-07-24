@@ -95,10 +95,10 @@ const Services = () => {
                 We offer a wide range of services to cater to your every need. Our team of experts will work with you every step of the way to ensure that your project is completed to perfection.
                 </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center'>
                 {
                 items.map((item, index) => (
-                    <Card key={index} title={item.title} imageUrl={item.imageUrl} className='mb-4'/>
+                    <Card key={index} title={item.title} imageUrl={item.imageUrl} className='mb-2'/>
                 ))
                 }
             </div>

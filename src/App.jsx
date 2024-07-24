@@ -6,6 +6,7 @@ import About from './components/About'
 import Services from './components/Services'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
+import Footer from './components/ui/footer'
 
 
 function App() {
@@ -18,8 +19,7 @@ function App() {
       <About/>
       <Projects/>
       <Contact/>
-
-      <div className='bg-gray-600 w-full h-screen'></div>
+      <Footer/>
     </div>
   )
 }

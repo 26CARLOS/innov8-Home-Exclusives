@@ -1,6 +1,14 @@
 import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } from "@/components/ui/carousel"
+  
   
 import kitchen1 from '../assets/images/kitchens/IMG-20240514-WA0014.jpg'
 import kitchen2 from '../assets/images/kitchens/IMG-20240514-WA0017.jpg'
@@ -45,40 +53,41 @@ const Projects = () => {
   return (
     <section className='flex flex-col justify-center items-center m-4' id='portfolio'>
         <h1 className='text-black text-4xl'>Projects</h1>
-        <Accordion type="single" collapsible>
-            <AccordionItem value="item-1" className=''>
-                <AccordionTrigger className='text-center'>CLICK HERE TO TOGGLE PROJECT GALLERY</AccordionTrigger>
-                <AccordionContent>
-                    <div className=''>
-                    <Tabs defaultValue="account" className="flex justify-center flex-col">
-                        <TabsList className='text-2xl'>
-                            <TabsTrigger value="account" className='text-2xl'>Kitchens</TabsTrigger>
-                            <TabsTrigger value="password"className='text-2xl'>Bedrooms</TabsTrigger>
-                        </TabsList>
-                        <TabsContent value="account">
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                                {kitchens.map((kitchen, index) => (
-                                    <div key={index} className="relative h-96">
-                                        <img src={kitchen} alt="kitchen" className="h-full w-full max-w-full rounded-lg object-cover object-center hover:2xl:" />
-                                    </div>
-                                ))}
-                            </div>
-                        </TabsContent>
-                        <TabsContent value="password">
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                                {bedrooms.map((bedroom, index) => (
-                                    <div key={index} className="relative h-96">
-                                        <img src={bedroom} alt="bedroom" className="h-full w-full max-w-full rounded-lg object-cover object-center hover:2xl:" />
-                                    </div>
-                                ))}
-                            </div>
-                        </TabsContent>
-                    </Tabs>
-                    </div>
-
-                </AccordionContent>
-            </AccordionItem>
-        </Accordion>
+        <p className='text-center py-4'>Have a look at the homes we've improved in the past. Scroll through our gallery.</p>
+        <div className=''>
+            <Tabs defaultValue="kitchens" className="flex justify-center flex-col">
+                <TabsList className='text-2xl'>
+                    <TabsTrigger value="kitchens" className='text-2xl'>Kitchens</TabsTrigger>
+                    <TabsTrigger value="bedrooms"className='text-2xl'>Bedrooms</TabsTrigger>
+                </TabsList>
+                <TabsContent value="kitchens">
+                    <Carousel className="w-full max-w-xs md:max-w-xl">
+                        <CarouselContent>
+                        {kitchens.map((kitchen, index) => (
+                            <CarouselItem key={index} className="relative h-96">
+                                <img src={kitchen} alt="kitchen" className="h-full w-full max-w-full rounded-lg object-cover object-center" />
+                            </CarouselItem>
+                        ))}
+                        </CarouselContent>
+                        <CarouselPrevious className='hidden md:block'/>
+                        <CarouselNext className='hidden md:block'/>
+                    </Carousel>
+                </TabsContent>
+                <TabsContent value="bedrooms">
+                    <Carousel className="w-full max-w-xs md:max-w-xl">
+                        <CarouselContent>
+                        {bedrooms.map((kitchen, index) => (
+                            <CarouselItem key={index} className="relative h-96">
+                                <img src={kitchen} alt="kitchen" className="h-full w-full max-w-full rounded-lg object-cover object-center" />
+                            </CarouselItem>
+                        ))}
+                        </CarouselContent>
+                        <CarouselPrevious className='hidden md:block'/>
+                        <CarouselNext className='hidden md:block'/>
+                    </Carousel>
+                </TabsContent>
+            </Tabs>
+            </div>
     </section>
   )
 }
