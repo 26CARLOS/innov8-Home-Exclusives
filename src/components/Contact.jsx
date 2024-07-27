@@ -11,8 +11,7 @@ const Contact = () => {
             <div className='grid grid-cols-2 space-x-4 divide-x-2'>
               <PhoneIcon className='h-20'/>
               <div className='flex flex-col justify-center px-2'>
-                <p className=''>012-345-6789</p>
-                <p>012-345-6789</p>
+                <p className=''>074 898 7870</p>
               </div>
             </div>
 
