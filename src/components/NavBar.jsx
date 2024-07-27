@@ -39,7 +39,7 @@ export default function NavBar() {
           {
             navigation.map(item => (
               <Link to={item.id} spy={true} smooth={true} offset={-70} duration={500} key={item.id}>
-                <li className='font-semibold my-7 md:my-0 md:ml-8' key={item.name}>
+                <li className='font-semibold my-7 md:my-0 md:ml-8 cursor-pointer' key={item.name}>
                   {item.name}
                 </li>
               </Link>
