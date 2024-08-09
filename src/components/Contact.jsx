@@ -11,15 +11,14 @@ const Contact = () => {
             <div className='grid grid-cols-2 space-x-4 divide-x-2'>
               <PhoneIcon className='h-20'/>
               <div className='flex flex-col justify-center px-2'>
-                <p className=''>074 898 7870</p>
+                <p className=''><a href="tel:+27748987870">074 898 7870</a></p>
               </div>
             </div>
 
             <div className='grid grid-cols-2 space-x-4 divide-x-2'>
               <AtSymbolIcon className='h-20'/>
               <div className='flex flex-col justify-center px-2'>
-                <p>innov8@gmail.com</p>
-                <p>homeEXC@gmail.com</p>
+                <p><a href="mailto:scentjonnes@innov8homeexclusives.com">scentjonnes@innov8homeexclusives.com</a></p>
               </div>
             </div>
 
