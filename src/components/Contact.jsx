@@ -8,17 +8,17 @@ const Contact = () => {
         <h1 className='text-4xl  text-center py-4'>Contact Us</h1>
         <p>We will get back to you As Soon As Possible.</p>
         <div className='grid grid-rows-2 items-center font-bold divide-y-2'> 
-            <div className='grid grid-cols-2 space-x-4 divide-x-2'>
-              <PhoneIcon className='h-20'/>
+            <div className='grid grid-cols-2  divide-x-2'>
+              <PhoneIcon className='h-10'/>
               <div className='flex flex-col justify-center px-2'>
                 <p className=''><a href="tel:+27748987870">+27 74 898 7870</a></p>
               </div>
             </div>
 
-            <div className='grid grid-cols-2 space-x-4 divide-x-2'>
-              <AtSymbolIcon className='h-20'/>
+            <div className='grid grid-cols-2 divide-x-2'>
+              <AtSymbolIcon className='h-10'/>
               <div className='flex flex-col justify-center px-2'>
-                <p><a href="mailto:scentjonnes@innov8homeexclusives.com">scentjonnes@innov8homeexclusives.com</a></p>
+                <p className="text-xs break-words"><a href="mailto:scentjonnes@innov8homeexclusives.com">scentjonnes@innov8homeexclusives.com</a></p>
               </div>
             </div>
 
